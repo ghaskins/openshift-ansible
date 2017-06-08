@@ -1,0 +1,9 @@
+- name: Ensure NetworkManager is installed
+  yum:
+    name: NetworkManager
+    state: latest
+
+- name: Ensure NetworkManager is running
+  service:
+    name: NetworkManager
+    state: started
