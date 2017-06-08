@@ -1,3 +1,4 @@
+---
 - name: Add CentOS-Updates repository
   yum_repository:
     name: updates
