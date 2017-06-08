@@ -1,7 +1,11 @@
-- name: Set releasever
-  lineinfile:
-    path: /etc/yum/vars/releasever
-    line: '7'
+- name: Add CentOS-Updates repository
+  yum_repository:
+    name: updates
+    description: CentOS-Updates
+    baseurl: http://mirror.centos.org/centos/7/updates/$basearch/
 
-- name: Reinstall centos-release
-  command: yum install -y centos-release
+- name: Add CentOS-Extras repository
+  yum_repository:
+    name: extras
+    description: CentOS-Extras
+    baseurl: http://mirror.centos.org/centos/7/extras/$basearch/
