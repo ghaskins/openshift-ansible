@@ -1,0 +1,7 @@
+- name: Set releasever
+  lineinfile:
+    path: /etc/yum/vars/releasever
+    line: '7'
+
+- name: Reinstall centos-release
+  command: yum install -y centos-release
