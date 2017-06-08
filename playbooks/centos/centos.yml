@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles:
+    - centos_repos
