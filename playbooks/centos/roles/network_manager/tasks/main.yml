@@ -3,6 +3,12 @@
     name: NetworkManager
     state: latest
 
+- name: Update resolve.conf
+  copy:
+    src: resolv.conf
+    dest: /etc/resolv.conf
+    mode: 0444
+
 - name: Ensure NetworkManager is running
   service:
     name: NetworkManager
