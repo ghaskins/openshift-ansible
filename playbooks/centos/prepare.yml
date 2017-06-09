@@ -3,5 +3,3 @@
   roles:
     - centos_repos
     - network_manager
-
-- include: ../byo/config.yml
