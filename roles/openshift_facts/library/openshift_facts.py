@@ -1195,7 +1195,7 @@ def get_version_output(binary, version_cmd):
 
     # issue #6574 - strip tabs from output
     tabs = re.compile(r'\t+')
-    return tabs.sub('', output)
+    return tabs.sub(' ', output)
 
 
 def get_docker_version_info():
