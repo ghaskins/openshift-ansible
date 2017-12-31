@@ -1192,7 +1192,7 @@ def get_version_output(binary, version_cmd):
 
     if os.path.isfile(cmd[0]):
         _, output, _ = module.run_command(cmd)  # noqa: F405
-    return output
+    return output.strip('\t')
 
 
 def get_docker_version_info():
